@@ -1,0 +1,35 @@
+package model;
+
+import java.util.*;
+
+public class Student {
+    private String rollNo;
+    private String name;
+
+    public Student(String rollNo, String name) {
+        this.rollNo = rollNo;
+        this.name = name;
+    }
+
+    public String getRollNo() { return rollNo; }
+    public void setRollNo(String rollNo) { this.rollNo = rollNo; }
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
+    @SuppressWarnings("resource")
+	public Feedback giveFeedback(List<Question> questions, TrainingProgram program, Teacher trainer) {
+        Scanner sc = new Scanner(System.in);
+        List<Answer> answers = new ArrayList<>();
+        for (Question q : questions) {
+            System.out.println(q);
+            System.out.print("Your Answer: ");
+            String resp = sc.nextLine();
+            answers.add(new Answer(q, resp));
+        }
+        return new Feedback(this, answers, program, trainer);
+    }
+
+    public String toString() {
+        return rollNo + " - " + name;
+    }
+}

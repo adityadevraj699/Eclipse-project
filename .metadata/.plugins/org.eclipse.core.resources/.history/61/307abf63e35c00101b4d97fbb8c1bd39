@@ -1,0 +1,23 @@
+import java.time.LocalDate;
+import model.*;
+
+public class Main {
+    public static void main(String[] args) {
+        TrainingProgram program = new TrainingProgram("Wipro TalentNext 2025",
+                LocalDate.of(2025, 1, 1),
+                LocalDate.of(2025, 3, 31),
+                "Core Java + OOP + DSA");
+
+        Teacher trainer = new Teacher("T101", "Mr. Amol Sharma");
+        program.addTeacher(trainer);
+
+        program.addStudent(new Student("S001", "Aditya Kumar"));
+
+        FeedbackPhase phase = new FeedbackPhase("Phase1");
+        phase.loadQuestionsFromFile("C:/Users/Dell/Desktop/wirpo java training 20K5/week 2/question 12/feedback_questions.txt");
+
+        program.addFeedbackPhase(phase);
+
+        program.collectFeedbackFromAllStudents("Phase1");
+    }
+}

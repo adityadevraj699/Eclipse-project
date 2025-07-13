@@ -1,0 +1,71 @@
+package app;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+import model.ResumeData;
+import util.FileUtil;
+import util.ValidatorUtil;
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("Welcome to Resume Builder App");
+        System.out.println("===============================================================\n");
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Create a Resume:\n");
+
+        System.out.print("Enter your Name: ");
+        String name = sc.nextLine();
+
+        System.out.print("Enter your Email: ");
+        String email = sc.nextLine();
+
+        System.out.print("Enter your Phone Number: ");
+        String phone = sc.nextLine();
+
+        System.out.print("Enter your Skills (comma-separated): ");
+        String skillsInput = sc.nextLine();
+        String[] skillsArray = skillsInput.split(",");
+        
+        
+        System.out.println("Do you want to check your resume validation? (Yes/No)");
+        String choice = sc.nextLine();
+
+        if (choice.equalsIgnoreCase("yes")) {
+            boolean isEmailValid = ValidatorUtil.isValidEmail(email);
+            boolean isPhoneValid = ValidatorUtil.isValidPhone(phone);
+
+            System.out.println("\n=== Validation Report ===");
+            System.out.println("Email : " + email + (isEmailValid ? " Valid" : " Invalid"));
+            System.out.println("Phone : " + phone + (isPhoneValid ? " Valid" : " Invalid"));
+
+            if (isEmailValid && isPhoneValid) {
+                System.out.println("Your resume passed all validations!");
+
+                // Save verified entry
+                String outputPath = "C:\\Users\\Dell\\Desktop\\Eclipse project\\ResumeValidation\\src\\output";
+                ValidatorUtil.saveToVerifiedFile(outputPath, name, email, phone, Arrays.asList(skillsArray));
+            } else {
+                System.out.println("⚠️ Please correct the invalid fields.");
+                throw new RuntimeException("❌ You can't proceed further due to invalid input!");
+            }
+        } else {
+            System.out.println("Validation skipped.");
+        }
+
+        ResumeData resumeData = new ResumeData(name, email, phone, Arrays.asList(skillsArray));
+
+        // Display resume summary
+        System.out.println("\n" + resumeData.toString());
+
+        // Save resume to input folder
+        String inputPath = "C:\\Users\\Dell\\Desktop\\Eclipse project\\ResumeValidation\\src\\input";
+        FileUtil.saveResumeToFile(inputPath, email, resumeData.toString());
+
+        
+
+        sc.close();
+    }
+}

@@ -1,0 +1,36 @@
+package model;
+
+import java.io.*;
+import java.util.List;
+
+public class Feedback {
+    private Student student;
+    private List<Answer> answers;
+
+    public Feedback(Student student, List<Answer> answers) {
+        this.student = student;
+        this.answers = answers;
+    }
+
+    public void writeFeedbackToFile(String phase) {
+        try {
+            File dir = new File("feedbacks");
+            if (!dir.exists()) dir.mkdirs();
+            File file = new File("feedbacks/feedback_" + student.getRollNo() + "_" + phase + ".txt");
+            BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+            writer.write("Student: " + student.getName() + " (" + student.getRollNo() + ")\n\n");
+            for (Answer answer : answers) {
+                writer.write(answer.toString());
+                writer.newLine();
+            }
+            writer.close();
+            System.out.println("Feedback saved for: " + student.getName());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public String toString() {
+        return "Feedback by " + student.getName();
+    }
+}

@@ -1,0 +1,51 @@
+MEERUT INSTITUTE OF TECHNOLOGY, MEERUT
+TRAINING PROGRAM: Wipro TalentNext 2025
+Start Date: 2025-01-01
+End Date: 2025-03-31
+Curriculum: Core Java + OOP + DSA
+Trainer: Mr. Amol Sharma
+
+Student: Aditya Kumar (S001)
+
+1. How do you rate the overall quality of the Java training sessions? [Scale: 1 (Poor) to 5 (Excellent)]
+Answer: 5
+
+2. Were the topics covered aligned with Wipro TalentNext objectives and industry expectations? (Yes / No)
+Answer: yes
+
+3. Which Java topics did you find well explained? 
+Answer: all
+
+4. Which Java topics did you find difficult to understand?
+Answer: no
+
+5. How effective were the hands-on coding exercises in enhancing your understanding? [Scale: 1 (Not useful) to 5 (Very useful)]
+Answer: 5
+
+6. Was the trainer well-prepared and confident while delivering the sessions? (Yes / No)
+Answer: yes
+
+7. Did the trainer encourage questions and handle doubts effectively? (Yes / No / Somewhat)
+Answer: yes
+
+8. Rate the trainer's communication and explanation skills. [Scale: 1 (Poor) to 5 (Excellent)]
+Answer: 5
+
+9. Is the pace of the training appropriate for your understanding level? (Too Slow / Just Right / Too Fast)
+Answer: just right
+
+10. How confident do you feel in applying Java concepts after this training? [Scale: 1 (Not confident) to 5 (Very confident)]
+Answer: 5
+
+11. Do you feel this training has improved your industry readiness in Java programming? (Yes / No / Not Sure)
+Answer: yes
+
+12. Would you recommend this training program to other students? (Yes / No)
+Answer: yes
+
+13. What suggestions would you like to give to improve the training sessions (content, tools, pace, format, etc.)?
+Answer: no
+
+14. Any additional comments, thoughts, or feedback?
+Answer: no
+

@@ -1,0 +1,14 @@
+package util;
+
+public class ValidatorUtil {
+
+    // Validate email using simple regex
+    public static boolean isValidEmail(String email) {
+        return email.matches("^[\\w.-]+@[\\w.-]+\\.\\w{2,}$");
+    }
+
+    // Validate phone number (only 10 digits)
+    public static boolean isValidPhone(String phone) {
+        return phone.matches("^\\d{10}$");
+    }
+}

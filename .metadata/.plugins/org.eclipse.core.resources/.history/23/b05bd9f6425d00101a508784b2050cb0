@@ -1,0 +1,38 @@
+public void writeFeedbackToFile(String phase) {
+    String baseFolderPath = "C:/Users/Dell/Desktop/Eclipse project/feedbackManagerApplication/src/feedbacks";
+    String phaseFolderPath = baseFolderPath + "/phase" + phase; // <--- Phase specific folder
+    File dir = new File(phaseFolderPath);
+
+    try {
+        if (!dir.exists()) {
+            boolean created = dir.mkdirs(); // creates all required dirs
+            if (!created) {
+                System.err.println("Could not create feedback phase folder.");
+                return;
+            }
+        }
+
+        File file = new File(dir, "feedback_" + student.getRollNo() + "_" + phase + ".txt");
+        BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+
+        writer.write("MEERUT INSTITUTE OF TECHNOLOGY, MEERUT\n");
+        writer.write("TRAINING PROGRAM: " + trainingProgram.getName() + "\n");
+        writer.write("Start Date: " + trainingProgram.getStartDate() + "\n");
+        writer.write("End Date: " + trainingProgram.getEndDate() + "\n");
+        writer.write("Curriculum: " + trainingProgram.getCurriculum() + "\n");
+        writer.write("Trainer: " + trainer.getName() + "\n\n");
+
+        writer.write("Student: " + student.getName() + " (" + student.getRollNo() + ")\n\n");
+
+        for (Answer answer : answers) {
+            writer.write(answer.toString());
+            writer.newLine();
+        }
+
+        writer.close();
+        System.out.println("Feedback saved for: " + student.getName());
+        // System.out.println("File path: " + file.getAbsolutePath());
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}

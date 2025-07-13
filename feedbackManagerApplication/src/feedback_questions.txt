@@ -1,0 +1,36 @@
+MEERUT INSTITUTE OF TECHNOLOGY, MEERUT
+TRAINING PROGRAM: Wipro TalentNext 2025
+Mode of Classes: Offline
+Trainer: Mr. Amol Sharma
+
+FEEDBACK - I (Phase 1)
+
+------------------------------------------------
+SECTION A: Training Content and Delivery
+------------------------------------------------
+How do you rate the overall quality of the Java training sessions? [Scale: 1 (Poor) to 5 (Excellent)]
+Were the topics covered aligned with Wipro TalentNext objectives and industry expectations? (Yes / No)
+Which Java topics did you find well explained? 
+Which Java topics did you find difficult to understand?
+How effective were the hands-on coding exercises in enhancing your understanding? [Scale: 1 (Not useful) to 5 (Very useful)]
+
+------------------------------------------------
+SECTION B: Trainer and Teaching Style
+------------------------------------------------
+Was the trainer well-prepared and confident while delivering the sessions? (Yes / No)
+Did the trainer encourage questions and handle doubts effectively? (Yes / No / Somewhat)
+Rate the trainer's communication and explanation skills. [Scale: 1 (Poor) to 5 (Excellent)]
+Is the pace of the training appropriate for your understanding level? (Too Slow / Just Right / Too Fast)
+
+------------------------------------------------
+SECTION C: Learning Experience and Outcomes
+------------------------------------------------
+How confident do you feel in applying Java concepts after this training? [Scale: 1 (Not confident) to 5 (Very confident)]
+Do you feel this training has improved your industry readiness in Java programming? (Yes / No / Not Sure)
+Would you recommend this training program to other students? (Yes / No)
+
+------------------------------------------------
+SECTION D: Suggestions & Final Thoughts
+------------------------------------------------
+What suggestions would you like to give to improve the training sessions (content, tools, pace, format, etc.)?
+Any additional comments, thoughts, or feedback?

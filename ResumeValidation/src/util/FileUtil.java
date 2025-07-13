@@ -1,0 +1,25 @@
+package util;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.File;
+
+public class FileUtil {
+
+    public static void saveResumeToFile(String basePath, String email, String content) {
+        try {
+            // Sanitize email to make it safe for filename
+            String safeEmail = email.replaceAll("@", "_at_").replaceAll("\\.", "_dot_");
+            String filePath = basePath + "\\" + safeEmail + ".txt";
+
+            File file = new File(filePath);
+            FileWriter writer = new FileWriter(file);
+            writer.write(content);
+            writer.close();
+
+            System.out.println("Resume saved successfully");
+        } catch (IOException e) {
+            System.out.println("Error saving file: " + e.getMessage());
+        }
+    }
+}
